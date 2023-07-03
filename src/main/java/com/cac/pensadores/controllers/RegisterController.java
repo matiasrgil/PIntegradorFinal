@@ -23,22 +23,22 @@ public class RegisterController extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         String uname = request.getParameter("name");
+        String usurname = request.getParameter("surname");
         String uemail = request.getParameter("email");
-        String upwd = request.getParameter("pass");
-        String umobile = request.getParameter("contact");
+        String upwd = request.getParameter("password");
         RequestDispatcher disp = null;
         Connection con = null;
 
 
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/comision_22030?useSSL=false", "root", "12345678");
-            final String STATEMENT = "insert into users (name, email, pass, phone) values (?,?,?,?)";
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/cac23050?useSSL=false", "root", "12345678");
+            final String STATEMENT = "insert into users (name, surname, email, password) values (?,?,?,?)";
             PreparedStatement pst = con.prepareStatement(STATEMENT);
             pst.setString(1, uname);
-            pst.setString(2, uemail);
-            pst.setString(3, upwd);
-            pst.setString(4, umobile);
+            pst.setString(2, usurname);
+            pst.setString(3, uemail);
+            pst.setString(4, upwd);
 
             int rowCount = pst.executeUpdate();
             disp = request.getRequestDispatcher("login.jsp");
