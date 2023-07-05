@@ -10,7 +10,7 @@
                 <img src="./img/codoacodo-min.png" alt="codo">
                 <h1 style="color: white; margin-top: auto; margin-bottom: 50px;">Iniciar Sesión</h1>
             </div>
-            <form action="index.jsp">
+            <form action="login" method="post">
 
                 <div class="row">
                     <div class="col mb-3">
@@ -27,6 +27,14 @@
                         </div>
                     </div>
                 </div>
+            </form>
+            <div class="text-center">
+                <p style="color: white">Ó</p>
+            </div>
+            <form class="container" action="register.jsp">
+                <article class="text-center mt-4">
+                    <input type="submit" class="btn btn-lg btn-form" value="Registrarse">
+                </article>
             </form>
 
         </div>

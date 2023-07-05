@@ -18,16 +18,6 @@ import java.sql.ResultSet;
 @WebServlet(name = "login", value = "/login")
 public class LoginController extends HttpServlet {
 
-    public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        response.setContentType("text/html");
-        request.getSession().setAttribute("email", request.getParameter("email"));
-
-        // Hello
-        PrintWriter out = response.getWriter();
-        out.println("<html><body>");
-        out.println("<h1>Helllo</h1>");
-        out.println("</body></html>");
-    }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
@@ -47,7 +37,8 @@ public class LoginController extends HttpServlet {
             ResultSet rs = ps.executeQuery();
 
             if (rs.next()) {
-                session.setAttribute("email", rs.getString(1));
+                session.setAttribute("email", rs.getString("email"));
+                session.setAttribute("nombre", rs.getString("nombre"));
                 disp = request.getRequestDispatcher("index.jsp");
             } else {
                 request.setAttribute("status", "failed");

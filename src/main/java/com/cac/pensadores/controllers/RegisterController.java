@@ -22,8 +22,8 @@ public class RegisterController extends HttpServlet {
      */
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        String uname = request.getParameter("name");
-        String usurname = request.getParameter("surname");
+        String uname = request.getParameter("nombre");
+        String usurname = request.getParameter("apellido");
         String uemail = request.getParameter("email");
         String upwd = request.getParameter("password");
         RequestDispatcher disp = null;
@@ -33,7 +33,7 @@ public class RegisterController extends HttpServlet {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection("jdbc:mysql://localhost:3306/cac23050?useSSL=false", "root", "12345678");
-            final String STATEMENT = "insert into users (name, surname, email, password) values (?,?,?,?)";
+            final String STATEMENT = "insert into users (nombre, apellido, email, password) values (?,?,?,?)";
             PreparedStatement pst = con.prepareStatement(STATEMENT);
             pst.setString(1, uname);
             pst.setString(2, usurname);

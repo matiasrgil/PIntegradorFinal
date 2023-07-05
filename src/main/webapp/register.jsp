@@ -13,23 +13,23 @@
                         <img src="./img/codoacodo-min.png" alt="codo">
                         <h1 style="color: white; margin-top: auto; margin-bottom: 50px;">Registrarse</h1>
                     </div>
-                    <form action="hello-servlet">
+                    <form action="register" method="post">
                         <div class="row gx-2">
                             <div class="col-md mb-3">
-                                <input type="text" class="form-control" placeholder="Nombre" aria-label="Nombre" id="nombre" required>
+                                <input type="text" class="form-control" placeholder="Nombre" aria-label="Nombre" name="nombre" id="nombre" required>
                             </div>
                             <div class="col-md mb-3">
-                                <input type="text" class="form-control" placeholder="Apellido" aria-label="Apellido" id="apellido" required>
+                                <input type="text" class="form-control" placeholder="Apellido" aria-label="Apellido" name="apellido" id="apellido" required>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col mb-3">
-                                <input type="email" class="form-control" placeholder="Email" aria-label="Email" id="mail" required>
+                                <input type="email" class="form-control" placeholder="Email" aria-label="Email" name="email" id="mail" required>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col mb-3">
-                                <input type="password" class="form-control" placeholder="Contraseña" aria-label="Password" id="pass" required>
+                                <input type="password" class="form-control" placeholder="Contraseña" aria-label="Password" name="password" id="pass" required>
                             </div>
                         </div>
 

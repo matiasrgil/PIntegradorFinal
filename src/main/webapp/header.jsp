@@ -28,12 +28,27 @@
                     <li class="nav-item">
                         <a class="nav-link btn-compra-tickets" href="comprar-tickets.jsp">Comprar tickets</a>
                     </li>
+                    <%
+                        if(session.getAttribute("email") == null){
+                    %>
                     <li class="nav-item">
                         <a class="nav-link btn-log-reg" href="register.jsp">Registrarse</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link btn-log-reg" href="login.jsp">Iniciar Sesión</a>
                     </li>
+                    <%
+                        }
+                    %>
+                    <%
+                        if(session.getAttribute("email") != null){
+                    %>
+                    <li class="nav-item">
+                        <a class="nav-link btn-log-reg" href="logout">Cerrar Sesión</a>
+                    </li>
+                    <%
+                        }
+                    %>
                 </ul>
             </div>
         </div>
