@@ -1,15 +1,14 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
-<%
+<!--%
     if(session.getAttribute("email") == null){
         response.sendRedirect("login.jsp");
     }
-%>
+%-->
 <!doctype html>
 <html lang="es">
 <jsp:include page="head.jsp"/>
 <body>
 <jsp:include page="header.jsp"/>
-
 <main>
 
     <div id="myCarousel" class="carousel slide mb-4" data-bs-ride="carousel">
@@ -72,9 +71,18 @@
             <span class="visually-hidden">Siguiente</span>
         </button>
     </div>
-    <section class="text-center mb-4 mt-4">
-        <h1>Hola <span class="badge bg-secondary btn-log-reg"><%= session.getAttribute("nombre") %></span></h1>
-    </section>
+    <%
+    if(session.getAttribute("email") != null){
+
+    %>
+        <section class="text-center mb-4 mt-4">
+            <h1>Hola <span class="badge bg-secondary btn-log-reg"><%= session.getAttribute("nombre") %></span></h1>
+        </section>
+    <%
+    }
+    %>
+
+
     <section class="container mb-4" id="oradores">
         <h2 class="titulo-gral">Conoce a los <span>oradores</span></h2>
 
