@@ -7,7 +7,7 @@
     <div class="row justify-content-center">
         <div class="col-lg-8 col-xl-7">
             <div class="container d-flex">
-                <img src="./img/codoacodo-min.png" alt="codo">
+                <img src="./img/codoacodo.png" alt="codo">
                 <h1 style="color: white; margin-top: auto; margin-bottom: 50px;">Iniciar Sesión</h1>
             </div>
             <form action="login" method="post">
@@ -22,21 +22,16 @@
                 </div>
                 <div class="row">
                     <div class="col mb-3">
-                        <div class="d-grid">
-                            <button type="submit" class="btn btn-lg btn-form">Iniciar Sesión</button>
+                        <div class="d-grid d-flex justify-content-center">
+                            <button type="submit" class="btn btn-lg btn-form w-100">Iniciar Sesión</button>
                         </div>
+                        <article class="text-center mt-4">
+                            <!-- Botón para redireccionar a register.jsp -->
+                            <a href="register.jsp" class="btn btn-lg btn-form w-100 m-0">Registrarse</a>
+                        </article>
                     </div>
                 </div>
             </form>
-            <div class="text-center">
-                <p style="color: white">Ó</p>
-            </div>
-            <form class="container" action="register.jsp">
-                <article class="text-center mt-4">
-                    <input type="submit" class="btn btn-lg btn-form" value="Registrarse">
-                </article>
-            </form>
-
         </div>
     </div>
 </section>

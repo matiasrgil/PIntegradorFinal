@@ -9,6 +9,7 @@
 
 .btn-log-reg{ color: yellow!important; }
 
+
 @media (min-width: 992px) {
   .btn-compra-tickets, .btn-log-reg {
     border: 1px solid transparent;
@@ -44,9 +45,9 @@
 /* CAROUSEL
 -------------------------------------------------- */
 
-.bg-carousel-ba1 { background-image: url(../img/ba1-min.jpg); }
-.bg-carousel-ba2 { background-image: url(../img/ba2-min.jpg); }
-.bg-carousel-ba3 { background-image: url(../img/ba3-min.jpg); }
+.bg-carousel-ba1 { background-image: url(../img/ba1.jpg); }
+.bg-carousel-ba2 { background-image: url(../img/ba2.jpg); }
+.bg-carousel-ba3 { background-image: url(../img/ba3.jpg); }
 
 .carousel-item {
   background-size: cover;

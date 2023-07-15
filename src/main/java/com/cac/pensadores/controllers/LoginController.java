@@ -27,8 +27,8 @@ public class LoginController extends HttpServlet {
 
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/cac23050?useSSL=false", "root", "12345678");
-            final String QUERY = "select * from users where email = ? and password = ?";
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/integrador?useSSL=false", "root", "31080205");
+            final String QUERY = "select * from usuario where email = ? and password = ?";
             PreparedStatement ps = con.prepareStatement(QUERY);
             ps.setString(1, umail);
             ps.setString(2, upwd);
@@ -37,6 +37,7 @@ public class LoginController extends HttpServlet {
             if (rs.next()) {
                 session.setAttribute("email", rs.getString("email"));
                 session.setAttribute("nombre", rs.getString("nombre"));
+                session.setAttribute("apellido", rs.getString("apellido"));
                 disp = request.getRequestDispatcher("index.jsp");
             } else {
                 request.setAttribute("status", "failed");

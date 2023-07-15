@@ -13,7 +13,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-@WebServlet("/register")
+@WebServlet(name = "register", value = "/register")
 public class RegisterController extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
@@ -32,8 +32,8 @@ public class RegisterController extends HttpServlet {
 
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/cac23050?useSSL=false", "root", "12345678");
-            final String STATEMENT = "insert into users (nombre, apellido, email, password) values (?,?,?,?)";
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/integrador?useSSL=false", "root", "31080205");
+            final String STATEMENT = "insert into usuario (nombre, apellido, email, password) values (?,?,?,?)";
             PreparedStatement pst = con.prepareStatement(STATEMENT);
             pst.setString(1, uname);
             pst.setString(2, usurname);
